@@ -9,5 +9,6 @@ gunzip ${File}
 
 
 #Make bed family files of the concatenated file
-plink --vcf ${File_base}.vcf --make-bed --out ${File_base}
+#--double-id causes both family and within-family IDs to be set to the sample ID.
+plink --vcf ${File_base}.vcf --make-bed --out ${File_base} --double-id
 
